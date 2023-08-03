@@ -1,25 +1,21 @@
 package main
-import "fmt"
+import (
+	"fmt"
+	"time"
+	"GOlang-Training/calculator"
+)
 
 func main() {
-	var num int
-	for {
-		fmt.Scanln(&num)
-		InsertNumbers(num)
+	for i := 0; i < 100; i++ {
+		calculator.InsertNumber()
+		time.Sleep(1 * time.Second)
+		fmt.Println("Inserted : ", i)
+	}
+	
+	for i := 0; i< 100; i++ {
+		sum := calculator.GetSum()
+		time.Sleep(5 * time.Second)
+		fmt.Println("Sum : ", sum)
 	}
 }
 
-func InsertNumbers(num int) {
-	arr := []int{}
-	arr = append(arr, num)
-	theSum := GetAddition(arr)
-	fmt.Println(theSum)
-}
-
-func GetAddition(arr []int) int {
-	sum := 0
-	for _, v := range arr {
-		sum += v
-	}
-	return sum
-}
