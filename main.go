@@ -6,16 +6,22 @@ import (
 )
 
 func main() {
+	go append()
+	sum()
+}
+
+func append() {
 	for i := 0; i < 100; i++ {
-		calculator.InsertNumber()
+		calculator.InsertNumber(i)
 		time.Sleep(1 * time.Second)
 		fmt.Println("Inserted : ", i)
 	}
-	
-	for i := 0; i< 100; i++ {
+}
+
+func sum() {
+	for i := 0; i < 100; i++ {
 		sum := calculator.GetSum()
 		time.Sleep(5 * time.Second)
 		fmt.Println("Sum : ", sum)
 	}
 }
-
