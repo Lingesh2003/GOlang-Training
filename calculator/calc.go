@@ -21,3 +21,18 @@ func EvalUsingStruct(val Num) int {
 	}
 	return 0
 }
+
+
+var numList = []int{}
+
+func InsertNumber(n int) {
+	numList = append(numList, n)
+}
+
+func GetSum() int {
+	sum := 0
+	for _, v := range numList {
+		sum += v
+	}
+	return sum
+}
