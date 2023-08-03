@@ -5,7 +5,7 @@ import (
 )
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello Anil!")
+	fmt.Fprintf(w, "ok i pull up")
 }
 
 func IntroductionToAPI() {
