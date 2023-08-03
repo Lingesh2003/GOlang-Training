@@ -13,15 +13,15 @@ func main() {
 func append() {
 	for i := 0; i < 100; i++ {
 		calculator.InsertNumber(i)
-		time.Sleep(1 * time.Second)
 		fmt.Println("Inserted : ", i)
+		time.Sleep(1 * time.Second)
 	}
 }
 
 func sum() {
 	for i := 0; i < 100; i++ {
 		sum := calculator.GetSum()
-		time.Sleep(5 * time.Second)
 		fmt.Println("Sum : ", sum)
+		time.Sleep(5 * time.Second)
 	}
 }
