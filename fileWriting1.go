@@ -1,14 +1,17 @@
 package main
 
 import (
-	"fmt"
-	"time"
 	"bufio"
+	"fmt"
 	"os"
+	"time"
 )
 
-func maifileWriting1() {
-	file, _ := os.Open("a.txt")
+func fileWriting1() {
+	// b, _ := os.ReadFile("a.txt")
+	//fmt.Println(string(b))
+
+	file, _ := os.OpenFile("a.txt", os.O_RDWR|os.O_APPEND|os.O_CREATE, 0644)
 	defer file.Close()
 
 	scn := bufio.NewScanner(file)
