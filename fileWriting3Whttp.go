@@ -48,5 +48,13 @@ func fileWriting3Whttp() {
 }
 
 func HTTPhandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, prsn)
+	for key, value := range person {
+		fmt.Fprintln(w, key)
+		for _, v := range value {
+			fmt.Fprintf(w, v)
+			fmt.Fprintf(w, "")
+		}
+		fmt.Fprintln(w, "")
+		fmt.Println(person)
+	}
 }
