@@ -48,5 +48,13 @@ func main() {
 }
 
 func personHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, person)
+	for key, value := range person {
+		fmt.Fprintln(w, key)
+		for _, v := range value {
+			fmt.Fprintf(w, v)
+			fmt.Fprintf(w, "")
+		}
+		fmt.Fprintln(w, "")
+		fmt.Println(person)
+	}
 }
