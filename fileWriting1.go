@@ -17,7 +17,7 @@ func fileWriting1() {
 	scn := bufio.NewScanner(file)
 	
 	for scn.Scan() {
-		time.Sleep(500 * time.Second)
+		time.Sleep(500 * time.Millisecond)
 		line := scn.Text()
 		fmt.Println(line)
 	}
