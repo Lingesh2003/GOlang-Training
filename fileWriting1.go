@@ -11,7 +11,7 @@ func fileWriting1() {
 	// b, _ := os.ReadFile("a.txt")
 	//fmt.Println(string(b))
 
-	file, _ := os.OpenFile("a.txt", os.O_RDWR|os.O_APPEND|os.O_CREATE, 0644)
+	file, _ := os.OpenFile("fileWriting1.txt", os.O_RDWR|os.O_APPEND|os.O_CREATE, 0644)
 	defer file.Close()
 
 	scn := bufio.NewScanner(file)
